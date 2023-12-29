@@ -14,8 +14,6 @@ function Navbar() {
             {link.title}
           </NavLink>
         ))}
-      </ul>
-    </nav>
   );
 }
 

@@ -38,9 +38,8 @@ function Header() {
 
           <Menu.Divider />
         </Menu.Dropdown>
-      </Menu>
-    </header>
-  );
+      </Menu>);
+
 }
 
 export default Header;
