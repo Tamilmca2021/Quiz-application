@@ -10,7 +10,6 @@ function App() {
       <AuthProvider>
         <Outlet />
       </AuthProvider>
-      <Outlet />
     </MantineProvider>
   );
 }
