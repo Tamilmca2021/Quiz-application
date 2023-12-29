@@ -1,6 +1,6 @@
+import { Menu, rem } from "@mantine/core";
 import Navbar from "./Navbar";
 import { IconSettings, IconLogout, IconUserBolt } from "@tabler/icons-react";
-
 
 function Header() {
   return (
@@ -29,7 +29,9 @@ function Header() {
             leftSection={
               <IconLogout style={{ width: rem(14), height: rem(14) }} />
             }
-            onClick={logOutUser}
+            onClick={() => {
+              console.log("logout button pressed");
+            }}
           >
             Logout
           </Menu.Item>

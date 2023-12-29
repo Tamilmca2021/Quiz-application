@@ -1,3 +1,6 @@
+import { NavLink } from "react-router-dom";
+import { navLinks } from "../utills/constant";
+
 function Navbar() {
   return (
     <nav className="flex justify-center items-center ">
