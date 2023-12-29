@@ -1,11 +1,8 @@
-import { Menu, rem } from "@mantine/core";
 import Navbar from "./Navbar";
 import { IconSettings, IconLogout, IconUserBolt } from "@tabler/icons-react";
 
+
 function Header() {
-  function logOutUser() {
-    alert("logot successfully");
-  }
   return (
     <header className="flex w-full justify-between items-center bg-white px-14 py-2">
       {/* <img src="/images/ideas.png" className="w-11 h-11 rounded-full" /> */}

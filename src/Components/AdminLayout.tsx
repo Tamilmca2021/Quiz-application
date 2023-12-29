@@ -8,7 +8,7 @@ function AdminLayout({ children }: childprop) {
   return (
     <main>
       <Header />
-      <section className="bg-slate-300 mt-7">{children}</section>
+      <section className="bg-slate-600">{children}</section>
       <Footer />
     </main>
   );
