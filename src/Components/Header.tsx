@@ -1,23 +1,24 @@
 import { Menu, rem } from "@mantine/core";
 import Navbar from "./Navbar";
-import { IconSettings, IconLogout } from "@tabler/icons-react";
+import { IconSettings, IconLogout, IconUserBolt } from "@tabler/icons-react";
 
 function Header() {
   function logOutUser() {
     alert("logot successfully");
   }
   return (
-    <header className="flex w-full justify-between bg-white p-2 px-14">
-      <img src="/images/ideas.png" className="w-11 h-11 rounded-full" />
+    <header className="flex w-full justify-between items-center bg-white px-14 py-2">
+      {/* <img src="/images/ideas.png" className="w-11 h-11 rounded-full" /> */}
+      <div className="">
+        <h2 className="">Sterna-Quiz</h2>
+      </div>
       <Navbar />
-
       <Menu shadow="md" width={200}>
         <Menu.Target>
-          <div className="h-10 w-10 bg-slate-400 rounded-full">
-            <img src="/images/software-engineer.png" className="w-11 h-11" />
+          <div className="rounded-full bg-slate-300 p-2 border border-solid border-slate-900 hover:cursor-pointer active:scale-95 flex items-center justify-center">
+            <IconUserBolt />
           </div>
         </Menu.Target>
-
         <Menu.Dropdown>
           <Menu.Label>Welcome Admin</Menu.Label>
           <Menu.Item
@@ -38,8 +39,9 @@ function Header() {
 
           <Menu.Divider />
         </Menu.Dropdown>
-      </Menu>);
-
+      </Menu>
+    </header>
+  );
 }
 
 export default Header;
