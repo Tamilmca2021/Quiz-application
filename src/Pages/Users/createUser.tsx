@@ -5,8 +5,8 @@ import { Modal, Button, TextInput, Select } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import "@mantine/dates/styles.css";
 import { DateInput } from "@mantine/dates";
-import { API_URL } from "../../network/ApiClient";
 import { useEffect, useState } from "react";
+import API_URL from "../../network/Apiclient";
 
 function CreateUser() {
   const [opened, { open, close }] = useDisclosure(false);
