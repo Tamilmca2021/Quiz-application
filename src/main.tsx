@@ -12,6 +12,7 @@ import {
 import Home from "./Pages/Home";
 import App from "./App";
 import Login from "./Pages/Login";
+import User from "./Pages/Users/user";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,7 +20,7 @@ const router = createBrowserRouter(
       <Route index element={<Login />} />
       <Route path="home" element={<Home />}>
         <Route index element={<div>dashboard</div>} />
-        <Route path="users" element={<div>alluser</div>} />
+        <Route path="users" element={<User />} />
         <Route path="courses" element={<div>test</div>}>
           <Route path="questions" element={<div>Course questions</div>} />
         </Route>

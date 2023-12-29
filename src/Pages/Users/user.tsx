@@ -4,10 +4,10 @@ import { useEffect, useRef, useState } from "react";
 import TableHeader from "../../Components/TableHeader";
 import CreateUser from "./createUser";
 import TableComponent from "../../Components/Table";
-import { API_URL } from "../../network/ApiClient";
 import { Table } from "@mantine/core";
 import React from "react";
 import UserUpload from "./userUpload";
+import API_URL from "../../network/Apiclient";
 
 const HeaderComponents = [<CreateUser />, <UserUpload />];
 interface userDetailType {
