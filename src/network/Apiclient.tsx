@@ -4,7 +4,7 @@ import { cleanNotifications, showNotification } from "@mantine/notifications";
 
 // Create an instance of axios for making API requests with the specified base URL
 export const API_URL = axios.create({
-  baseURL: "http://127.0.0.1:3000/api/",
+  baseURL: "http://192.168.16.201:3000/api/",
 });
 
 // Interceptor to modify request configuration before sending
