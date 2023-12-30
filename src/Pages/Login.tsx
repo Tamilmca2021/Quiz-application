@@ -3,9 +3,9 @@ import { zodResolver } from "@mantine/form";
 import { z } from "zod";
 import { TextInput, Button, PasswordInput } from "@mantine/core";
 import { useNavigate } from "react-router";
-import API_URL from "../network/Apiclient";
-import { useContext } from "react";
+import API_URL from "../network/ApiClient";
 import { AuthContext } from "../context/authContext";
+import { useContext } from "react";
 
 interface LoginType {
   email: string;
@@ -13,7 +13,7 @@ interface LoginType {
 }
 
 function Login() {
-  const authUser = useContext(AuthContext);
+  const authContext = useContext(AuthContext);
   const navigate = useNavigate();
   const schema = z.object({
     email: z.string().email({ message: "Invalid email" }),
@@ -27,7 +27,6 @@ function Login() {
   });
 
   const onSubmit = async (value: LoginType) => {
-    console.log(value);
     const loginData = {
       email: value.email,
       password: value.password,
@@ -35,9 +34,8 @@ function Login() {
 
     const result = await API_URL.post("auth", loginData);
     if (result != null) {
-      console.log(result.data.data);
-      authUser?.login(result.data.data);
       navigate("/home/users");
+      authContext?.login(result.data.data);
     }
   };
 

@@ -14,7 +14,7 @@ interface TableProps {
 }
 
 function TableComponent({
-  isLoading = true,
+  isLoading,
   columns,
   from,
   to,
@@ -26,11 +26,11 @@ function TableComponent({
 }: TableProps) {
   return (
     <section>
-      <div className="m-2 border-2 border-black-500">
+      <div className="m-2">
         <ScrollArea className="w-full">
-          <Table className="w-full ml-0 mr-5 border-2 border-black-500">
+          <Table withColumnBorders withRowBorders className="w-full ml-0 mr-5">
             <Table.Thead className="border-2 border-black">
-              <Table.Tr className="border-2 border-black-500">
+              <Table.Tr>
                 {columns.map((heading, index) => (
                   <Table.Th key={index}>{heading}</Table.Th>
                 ))}
