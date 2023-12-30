@@ -1,10 +1,24 @@
+import { NavLink } from "react-router-dom";
+import { navLinks } from "../utills/constant";
+
 function Navbar() {
   return (
-    <nav>
-      <ul className="flex space-x-3 list-none">
-        <li>dash</li>
-        <li>subject</li>
-        <li>result</li>
+    <nav className="">
+      <ul className="flex items-center justify-center space-x-10 list-none">
+        {navLinks.map((link) => (
+          <NavLink
+            to={link.to}
+            key={link.title}
+            className={({ isActive }) =>
+              isActive
+                ? `text-black font-semibold no-underline`
+                : `text-gray-600 no-underline`
+            }
+          >
+            {link.icon}
+            {link.title}
+          </NavLink>
+        ))}
       </ul>
     </nav>
   );
