@@ -13,6 +13,8 @@ import Home from "./Pages/Home";
 import App from "./App";
 import Login from "./Pages/Login";
 import User from "./Pages/Users/user";
+import Courses from "./Pages/Test/test";
+import Results from "./Pages/Result/result";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,10 +23,10 @@ const router = createBrowserRouter(
       <Route path="home" element={<Home />}>
         <Route index element={<div>dashboard</div>} />
         <Route path="users" element={<User />} />
-        <Route path="courses" element={<div>test</div>}>
+        <Route path="courses" element={<Courses />}>
           <Route path="questions" element={<div>Course questions</div>} />
         </Route>
-        <Route path="results" element={<div>result</div>} />
+        <Route path="results" element={<Results />} />
         <Route path="reassign" element={<div>reassign</div>} />
       </Route>
       <Route path="/user" element={<div>users</div>}>
